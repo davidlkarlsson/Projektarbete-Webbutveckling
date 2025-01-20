@@ -3,10 +3,10 @@ const textarea = document.getElementById('responsive-textarea');
 window.addEventListener('resize', () => {
     
     if (window.innerWidth < 760) {
-        textarea.rows = 20;
+        textarea.rows = 8;
         textarea.cols = 30;
     } else {
-        textarea.rows = 30;
+        textarea.rows = 10;
         textarea.cols = 40;
     }
 });

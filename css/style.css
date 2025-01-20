@@ -620,6 +620,10 @@ input[type="submit"]:active {
 /* För skärmar max 1500px (tablet) */
 @media (max-width: 1500px) {
 
+  .text-fields {
+    font-size: 14px;
+  }
+
   #h2-contact {
     font-size: 30px;
   }
