@@ -536,7 +536,7 @@ nav a.active {
   width: 90%;
   max-width: 1000px;
   gap: 10px;
-  padding: 50px;
+  padding: 30px;
   border: 1px solid #47596a;
   border-radius: 8px; /* Rundar hörnen för ett mjukare utseende */
   background-color: rgba(34,34,42,0.5); /* 50% opacitet */
@@ -636,6 +636,10 @@ input[type="submit"]:active {
 
 /* För skärmar max 760px (tablet) */
 @media (max-width: 760px) {
+
+  .text-fields {
+    font-size: 14px;
+  }
 
   #h2-contact {
     font-size: 20px;
