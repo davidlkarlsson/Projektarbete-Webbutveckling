@@ -14,7 +14,6 @@ html, body {
 /* Ställ in Inter som standardfont på hela sidan */
 body {
   font-family: "Inter"; /* Använd Inter-fonten */
-  font-optical-sizing: auto; /* Optisk storlek anpassas automatiskt */
   font-weight: 400; /* Standard vikt (400, normal) */
   font-style: normal; /* Normalt (ej kursivt) */
 }
@@ -48,8 +47,8 @@ body {
     background-image: url(../images/desktop-background.jpg);
     background-size: cover; /* Gör att bilden täcker hela området */
     background-position: center center; /* Centrerar bilden */
-    background-attachment: fixed; /* Gör att bilden stannar på plats när man scrollar (valfritt) */
-    height: 100vh; /* Ser till att kroppen täcker hela höjden på skärmen */
+    background-attachment: fixed; /* Gör att bilden stannar på plats när man scrollar */
+    height: 100%; /* Ser till att kroppen täcker hela höjden på skärmen */
 }
 
   /* För tablet-enheter (max-bredd 1500px) */
@@ -102,8 +101,6 @@ header {
 #linkedin-link span, #github-link span {
   font-size: 16px;
 }
-
-
 
 /* Navigation links*/
 
@@ -164,8 +161,12 @@ nav a.active {
   padding: 10px 0;
 }
 
+#nav-mobile ul{
+  flex-direction: column;
+}
+
 #nav-mobile li {
-  margin: 5px 0; /* Utrymme mellan länkar */
+  margin: 2px; /* Utrymme mellan länkar */
 }
 
 #nav-mobile a {
@@ -182,7 +183,7 @@ nav a.active {
   }
 }
 
-/* För skärmar max 760px (tablet) */
+/* För skärmar max 760px (phone) */
 @media (max-width: 760px) {
   
   header {
@@ -238,7 +239,7 @@ nav a.active {
   width: fit-content;  /* Gör att bredden anpassas efter texten */
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 1s steps(8), cursor 1s steps(8) infinite;
+  animation: typewriter 1s steps(10), cursor 1s steps(10) infinite;
   margin-left: 30px;
 }
 
@@ -277,7 +278,7 @@ nav a.active {
   }
 }
 
-/* För skärmar max 760px (tablet) */
+/* För skärmar max 760px (phone) */
 @media (max-width: 760px) {
 
   .section-home {
@@ -320,7 +321,7 @@ nav a.active {
   width: fit-content;  /* Gör att bredden anpassas efter texten */
   white-space: nowrap;
   overflow: visible;
-  animation: typewriter 1s steps(8), cursor 1s steps(8) infinite;
+  animation: typewriter 1s steps(7), cursor 1s steps(7) infinite;
 }
 
 .profile-pic {
@@ -357,7 +358,7 @@ nav a.active {
   }
   }
 
-/* För skärmar max 760px (tablet) */
+/* För skärmar max 760px (phone) */
 @media (max-width: 760px) {
 
   .section-about {
@@ -381,6 +382,7 @@ nav a.active {
 /* ---------------------- TECHNOLOGY SECTION ---------------------- */
 
 .section-tech {
+  position: relative;
   display: flex; /* Gör att sektionen använder flexbox */
   flex-direction: column; /* Stapla elementen vertikalt */
   align-items: center; /* Centrerar elementen horisontellt */
@@ -394,7 +396,7 @@ nav a.active {
   border-right: solid 2px black;
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 1s steps(8), cursor 1s steps(8) infinite;
+  animation: typewriter 1s steps(10), cursor 1s steps(10) infinite;
 }
 
 
@@ -461,6 +463,48 @@ nav a.active {
   transform: scale(0.95); /* Gör knappen lite mindre när den klickas */
 }
 
+#filter-container {
+  display: none;
+}
+
+#filter-container.active{
+  display: flex;
+  position: absolute;
+  font-size: 16px;
+  top: 80px;
+  right: 40px;
+  gap: 10px;
+  align-items: center;
+}
+
+#filter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#filter-button {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  font-size: 18px; /* Sätter textstorleken till 18px */
+  color: #555;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#filter-button:hover {
+  background-color: #47596a;
+  color: white;
+  transform: scale(1.05);
+}
+
+#filter-button.active {
+  background-color: #47596a; /* Färg när knappen trycks ned */
+  color: white; /* Ändra textfärg om du vill */
+  transform: scale(0.95);
+}
 
 /* För skärmar max 1500px (tablet) */
 @media (max-width: 1500px) {
@@ -490,9 +534,17 @@ nav a.active {
   .button {
     font-size: 14px; /* Storlek på texten */
   }
+
+  #filter-container.active{
+    font-size: 14px;
+  }
+
+  #filter-button {
+    font-size: 16px; /* Sätter textstorleken till 18px */
+  }
 }
 
-/* För skärmar max 760px (tablet) */
+/* För skärmar max 760px (phone) */
 @media (max-width: 760px) {
 
   .article img {
@@ -518,6 +570,17 @@ nav a.active {
 
   .button {
     font-size: 12px; /* Storlek på texten */
+  }
+
+  #filter-container.active{
+    position: static;
+    font-size: 14px;
+  }
+
+  #filter-button {
+    position: static;
+    font-size: 14px; /* Sätter textstorleken till 18px */
+    margin: 20px 0;
   }
 }
 
@@ -638,7 +701,7 @@ input[type="submit"]:active {
 
 }
 
-/* För skärmar max 760px (tablet) */
+/* För skärmar max 760px (phone) */
 @media (max-width: 760px) {
 
   .text-fields {
@@ -684,7 +747,7 @@ input[type="submit"]:active {
   border-left: 1px solid #47596a;
 }
 
-#h1-name {
+#h2-name {
   font-weight: 300;
   font-size: xxx-large;
   margin: 0 0 5px;
@@ -762,7 +825,7 @@ input[type="submit"]:active {
   position: relative;
 }
 
-.h3-project::before {
+.h3-project::after {
   position: absolute;
   width: 13px;
   height: 13px;
@@ -775,14 +838,10 @@ input[type="submit"]:active {
 /* För skärmar max 1500px (tablet) */
 @media (max-width: 1500px) {
 
-  #h1-name {
+  #h2-name {
     font-size: xx-large;
   }
-  
-  #p-title {
-    font-size: 12px;
-  }
-  
+
   .resume-contact {
     font-size: 14px;
   }
@@ -790,70 +849,81 @@ input[type="submit"]:active {
   .resume-contact span {
     font-size: 12px;
   }
-  
-  .resume-info ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: right;
-    line-height: 30px;
-  }
-  
-  .resume-intro {
-    padding-left: 30px;
-    border-left: 1px solid #47596a;
-    text-align: justify;
-  }
-  
-  #h2-intro {
-    margin: 0;
-  }
-  
-  .resume-experience {
-    text-align: right;
-  }
-  
-  .h4-experience {
-    color: #47596a;
-  }
-  
-  .resume-experience ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    line-height: 25px;
-  }
-  
-  .resume-project {
-    padding-left: 30px;
-    border-left: 1px solid #47596a;
-    text-align: justify;
-  }
-  
-  .p-projectlink {
-    color: green;
-  }
-  
-  .h3-project {
-    position: relative;
-  }
-  
-  .h3-project::before {
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    background-color: #47596a;
-    content: '';
-    border-radius: 50%;
-    left: -37px;
+
+  .resume li {
+    font-size: 14px;
   }
 
+  .resume h2 {
+    font-size: 20px;
+  }
 
+  .resume h3 {
+    font-size: 18px;
+  }
 
+  .resume h4 {
+    font-size: 16px;
+  }
+
+  .resume p {
+    font-size: 14px;
+  }
 }
 
+/* För skärmar max 760px (phone) */
+@media (max-width: 760px) {
 
+  .resume {
+    padding: 20px;
+  }
 
+  .resume-title, .resume-intro, .resume-project {
+    padding-left: 10px;
+  }
+
+  #h2-name {
+    font-size: large;
+  }
+
+  .resume-contact span {
+    font-size: 7px;
+  }
+
+  .resume li {
+    font-size: 12px;
+  }
+
+  .resume-title li {
+    font-size: 10px;
+  }
+
+  .resume h2 {
+    font-size: 18px;
+  }
+
+  .resume h3 {
+    font-size: 16px;
+  }
+
+  .resume h4 {
+    font-size: 14px;
+  }
+
+  .resume p {
+    font-size: 12px;
+  }
+
+  #p-title {
+    font-size: 7px;
+  }
+
+  .h3-project::after {
+    width: 10px;
+    height: 10px;
+    left: -15px;
+  }
+}
 
 
 /* ---------------------- FOOTER SECTION ---------------------- */
@@ -868,7 +938,7 @@ footer {
   width: 100%; /* Gör att footern fyller hela sidans bredd */
   background-color: #d8dde1;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Skugga ovanför footern*/
-  height: 60px;
+  height: 80px;
   padding: 0 20px; /* Lägg till lite sidopadding */
 }
 
@@ -889,12 +959,8 @@ footer {
   transition: color 0.3s ease; /* Effekt vid hovring */
 }
 
-/* För skärmar max 700px (tablet) */
+/* För skärmar max 760px (phone) */
 @media (max-width: 700px) {
-
-  footer {
-    height: 80px;
-  }
 
   .footer-link {
     display: block;
@@ -910,15 +976,4 @@ footer {
   font-size: 12px;
   font-weight: 400;
 }
-
 }
-
-
-
-
-
-
-
-
-
-  

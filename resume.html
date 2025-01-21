@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
 
-
+    
 </head>
 
 <body>
@@ -41,7 +41,7 @@
             David Karlsson
         </h1>
 
-        <section class="header-right">
+        <div class="header-right">
 
             <div id="github-link">
                 <a href="https://github.com/davidlkarlsson" target="_blank" id="github-icon">
@@ -51,7 +51,7 @@
             </div>
 
             <div id="linkedin-link">
-                <a href="https://www.linkedin.com/in/david-karlsson" target="_blank" id="linkedin-icon">
+                <a href="https://www.linkedin.com/in/david-fredrik-karlsson" target="_blank" id="linkedin-icon">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
@@ -60,26 +60,27 @@
             <nav id="nav-menu">
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="resume.html" class="active">Resumé</a></li>
-
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="about.html">Om</a></li>
+                    <li><a href="technology.html">Teknologi</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="resume.html" class="active">CV</a></li>
                 </ul>
 
             </nav>
-        </section>
+        </div>
 
     </header>
 
     <nav id="nav-mobile">
 
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="technology.html">Technology</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resume.html" class="active">Resumé</a></li>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om</a></li>
+            <li><a href="technology.html">Teknologi</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="resume.html" class="active">CV</a></li>
+        </ul>
 
     </nav>
 
@@ -91,13 +92,12 @@
                 <img src="images/profile/david-small-100px.jpg" srcset=" 
         images/profile/david-medium-200px.jpg 200w, 
         images/profile/david-small-100px.jpg 100w" sizes="
-        (max-width: 700px) 100px,
-        (max-width: 1500px) 200px, 200px" alt="A picture of David Karlsson" class="resume-img">
+        (max-width: 1500px) 100px, 200px" alt="A picture of David Karlsson" class="profile-pic">
 
             </section>
 
             <section class="resume-title">
-                <h1 id="h1-name">David Karlsson</h1>
+                <h2 id="h2-name">David Karlsson</h2>
                 <p id="p-title">Java Developer Student</p>
 
                 <ul class="resume-contact">
@@ -108,7 +108,7 @@
 
             <section class="resume-info">
                 <ul>
-                    <li>From <b>Gnesta</b> - Sweden</li>
+                    <li>Från <b>Gnesta</b>, Sverige</li>
                     <li>25/11/1990</li>
                     <li>Gripenskolan, Nyköping</li>
                 </ul>
@@ -122,7 +122,7 @@
             </section>
 
             <section class="resume-experience">
-                <h2 id="h2-experience">EXPERIENCE</h2>
+                <h2 id="h2-experience">Erfarenheter</h2>
                 <article>
                     <h3 class="h3-experience">Student</h3>
                     <h4 class="h4-experience">2020 - 2022 ABCD COMPANY</h4>
@@ -140,7 +140,7 @@
                 </article>
 
                 <article>
-                    <h2>Skills</h2>
+                    <h2>Färdigheter</h2>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -194,7 +194,7 @@
     <footer>
         <p id="p-footer">© 2025 David Karlsson</p>
 
-        <section class="contact-links">
+        <div class="contact-links">
 
             <a href="tel:+46737154162" class="footer-link">
                 <i class="fas fa-phone"></i> +46 73 715 41 62
@@ -203,7 +203,7 @@
             <a href="mailto:david@example.com" class="footer-link">
                 <i class="fas fa-envelope"></i> davidfkarlsson@proton.me
             </a>
-        </section>
+        </div>
     </footer>
 
     <script src="javascript/app.js"></script>

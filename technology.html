@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology</title>
-    <meta name="description" content="Learn more about David Karlsson's technical skills in Java,
-    system development, and web design.">
+    <title>Teknologi</title>
+    <meta name="description" content="Lär dig mer om David Karlsson's tekniska kunskaper inom Java,
+    systemutveckling, och webbdesign.">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
@@ -41,7 +41,7 @@
             David Karlsson
         </h1>
 
-        <section class="header-right">
+        <div class="header-right">
 
             <div id="github-link">
                 <a href="https://github.com/davidlkarlsson" target="_blank" id="github-icon">
@@ -51,94 +51,122 @@
             </div>
 
             <div id="linkedin-link">
-                <a href="https://www.linkedin.com/in/david-karlsson" target="_blank" id="linkedin-icon">
+                <a href="https://www.linkedin.com/in/david-fredrik-karlsson" target="_blank" id="linkedin-icon">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
             </div>
-            
+
             <nav id="nav-menu">
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="technology.html" class="active">Technology</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="resume.html">Resumé</a></li>
-
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="about.html">Om</a></li>
+                    <li><a href="technology.html" class="active">Teknologi</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="resume.html">CV</a></li>
                 </ul>
 
             </nav>
-        </section>
+        </div>
 
     </header>
 
     <nav id="nav-mobile">
 
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="technology.html" class="active">Technology</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resume.html">Resumé</a></li>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om</a></li>
+            <li><a href="technology.html" class="active">Teknologi</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="resume.html">CV</a></li>
+        </ul>
 
     </nav>
 
     <main>
         <section class="section-tech">
 
-            <h2 id="h2-techno">Technology.</h2>
+            <h2 id="h2-techno">Teknologi.</h2>
+
+            <div id="filter-controls">
+                <button id="filter-button">Filtrera Artiklar</button>
+
+                <div id="filter-container">
+
+                    <label for="keyword-filter">Välj Nyckelord:</label>
+                    <select id="keyword-filter" onchange="filterArticles()">
+                        <option value="">Alla</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Database">Database</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                    </select>
+                </div>
+
+            </div>
 
             <div class="articles">
 
-                <article class="article">
+                <article class="article" data-keywords="Java">
                     <img src="images/articles/java-logo.png" alt="Java logo">
                     <h2>Java Development</h2>
-                    <p>Java is my primary programming language for this education. We have had the opportunity to try
-                        object-oriented programming, TDD, and unit testing with JUnit, among other things.
-                        Here is a simple game I created as a project assignment at the end of this course.</p>
+                    <p>Java är mitt primära programmeringsspråk för denna utbildning.
+                        Vi har fått möjligheten att prova på objektorienterad programmering, TDD (Test-Driven
+                        Development),enhetstestning med JUnit och mycket annat.
+                        Här är ett enkelt spel som jag skapade som projektuppgift i slutet av denna kurs.</p>
 
-                    <a href="https://github.com/davidlkarlsson/Projektarbete-Robber-Game" class="button" target="_blank">View Repository</a>
+                    <a href="https://github.com/davidlkarlsson/Projektarbete-Robber-Game" class="button"
+                        target="_blank">Till Repository</a>
                 </article>
 
 
-                <article class="article">
+                <article class="article" data-keywords="JavaScript">
                     <img src="images/articles/javascript-logo.png" alt="JavaScript logo">
                     <h2>JavaScript and Web Development</h2>
-                    <p>We haven't explored JavaScript in depth yet, we've begun with the basics, such as understanding
-                        variables, functions, and simple DOM manipulation.
-                        I look forward to learning more about its advanced features, such as promises, and frameworks
-                        like React. This project has a few lines of JS, check it out.</p>
+                    <p>Vi har inte utforskat JavaScript på djupet ännu, vi har endast utforskat grunderna,
+                        såsom att förstå variabler, funktioner och enkel DOM-manipulation (Document Object Model).
+                        Jag ser fram emot att lära mig mer om dess avancerade funktioner, som promises, och ramverk som
+                        React.
+                        Det här projektet innehåller några rader JavaScript, ta gärna en titt.</p>
 
-                    <a href="https://github.com/davidlkarlsson/Projektarbete-Webbutveckling" class="button" target="_blank">View Repository</a>
+                    <a href="https://github.com/davidlkarlsson/Projektarbete-Webbutveckling" class="button"
+                        target="_blank">Till Repository</a>
                 </article>
 
 
-                <article class="article">
+                <article class="article" data-keywords="Database">
                     <img src="images/articles/sql-logo.png" alt="Database logo">
                     <h2>Database Management</h2>
-                    <p>I have experience using SQL and databases like HSQLDB for data storage and retrieval, focusing on
-                        clean and optimized queries.</p>
+                    <p>Jag har erfarenhet av att arbeta med SQL och databaser som HSQLDB för effektiv lagring och
+                        hämtning av data.
+                        Mitt fokus har varit på att skapa rena och optimerade frågor för att säkerställa pålitliga och
+                        presterande databashanteringar.</p>
 
-                    <a href="https://github.com/davidlkarlsson/Projektarbete-EmployeeDB" class="button" target="_blank">View Repository</a>
+                    <a href="https://github.com/davidlkarlsson/Projektarbete-EmployeeDB" class="button"
+                        target="_blank">Till Repository</a>
                 </article>
 
 
-                <article class="article">
+                <article class="article" data-keywords="HTML">
                     <img src="images/articles/html-logo.png" alt="HTML logo">
                     <h2>HTML</h2>
-                    <p>Creating responsive and visually appealing web pages using modern CSS features, media queries,
-                        and semantic HTML5 structure is what i've used for this project. Check it out.</p>
-                    
-                    <a href="https://github.com/davidlkarlsson/Projektarbete-Webbutveckling" class="button" target="_blank">View Repository</a>
+                    <p>Jag har skapat responsiva och visuellt tilltalande webbsidor med hjälp av moderna CSS-funktioner,
+                        media queries och semantisk HTML5-struktur. Ta gärna en titt!</p>
+
+                    <a href="https://github.com/davidlkarlsson/Projektarbete-Webbutveckling" class="button"
+                        target="_blank">Till Repository</a>
                 </article>
 
-                <article class="article">
+                <article class="article" data-keywords="CSS">
                     <img src="images/articles/css-logo.png" alt="CSS logo">
                     <h2>CSS</h2>
-                    <p>Creating responsive and visually appealing web pages using modern CSS features, media queries,
-                        and semantic HTML5 structure is what i've used for this project. Check it out.</p>
+                    <p>Jag har skapat responsiva och visuellt tilltalande webbsidor med hjälp av moderna CSS-funktioner,
+                        media queries och semantisk HTML5-struktur. Ta gärna en titt!</p>
 
-                    <a href="https://github.com/davidlkarlsson/Projektarbete-Webbutveckling" class="button" target="_blank">View Repository</a>
+                    <a href="https://github.com/davidlkarlsson/Projektarbete-Webbutveckling" class="button"
+                        target="_blank">Till Repository</a>
                 </article>
 
             </div>
@@ -148,7 +176,7 @@
     <footer>
         <p id="p-footer">© 2025 David Karlsson</p>
 
-        <section class="contact-links">
+        <div class="contact-links">
 
             <a href="tel:+46737154162" class="footer-link">
                 <i class="fas fa-phone"></i> +46 73 715 41 62
@@ -157,7 +185,7 @@
             <a href="mailto:david@example.com" class="footer-link">
                 <i class="fas fa-envelope"></i> davidfkarlsson@proton.me
             </a>
-        </section>
+        </div>
     </footer>
 
     <script src="javascript/app.js"></script>

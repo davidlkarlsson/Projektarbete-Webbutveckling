@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <meta name="description" content="Learn about David Karlsson's journey, education,
-    and passion for system development and design.">
+    <title>Om mig</title>
+    <meta name="description" content="Följ David Karlssons resa,
+    utbildning och passion för systemutveckling och design.">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
@@ -41,7 +41,7 @@
             David Karlsson
         </h1>
 
-        <section class="header-right">
+        <div class="header-right">
 
             <div id="github-link">
                 <a href="https://github.com/davidlkarlsson" target="_blank" id="github-icon">
@@ -51,7 +51,7 @@
             </div>
 
             <div id="linkedin-link">
-                <a href="https://www.linkedin.com/in/david-karlsson" target="_blank" id="linkedin-icon">
+                <a href="https://www.linkedin.com/in/david-fredrik-karlsson" target="_blank" id="linkedin-icon">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
@@ -60,33 +60,34 @@
             <nav id="nav-menu">
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="resume.html">Resumé</a></li>
-
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="about.html" class="active">Om</a></li>
+                    <li><a href="technology.html">Teknologi</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="resume.html">CV</a></li>
                 </ul>
 
             </nav>
-        </section>
+        </div>
 
     </header>
 
     <nav id="nav-mobile">
 
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="technology.html">Technology</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resume.html">Resumé</a></li>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html" class="active">Om</a></li>
+            <li><a href="technology.html">Teknologi</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="resume.html">CV</a></li>
+        </ul>
 
     </nav>
 
     <main>
         <section class="section-about">
 
-            <h2 id="h2-about">About me.</h2>
+            <h2 id="h2-about">Om mig.</h2>
 
             <img src="images/profile/david-small-100px.jpg" srcset="
         images/profile/david-large-400px.jpg 400w, 
@@ -96,12 +97,12 @@
         (max-width: 1024px) 200px, 400px" alt="A picture of David Karlsson" class="profile-pic">
 
             <p id="p-about">
-                Hello there.<br>
-                My name is David Karlsson, and I study at STI Vocational College in Liljeholmen, Stockholm.<br>
-                The program is two years long, and my goal is to become a junior Java developer and hopefully enter
-                the job market.<br>
-                I am an open person who enjoys learning new things in life, especially in technology and design.<br>
-                In my free time, I enjoy traveling and listening to music.<br>
+                Hallå där.<br>
+                Jag heter David Karlsson, och jag studerar på STI Yrkeshögskola i Liljeholmen, Stockholm.<br>
+                Programmet är två år långt, och mitt mål är att bli en junior Java-utvecklare
+                och förhoppningsvis komma ut på arbetsmarknaden.<br>
+                Jag är en öppen person som gillar att lära mig nya saker i livet, särskilt inom teknik och design.<br>
+                På min fritid tycker jag om att resa och lyssna på musik.<br>
             </p>
 
         </section>
@@ -109,7 +110,7 @@
     <footer>
         <p id="p-footer">© 2025 David Karlsson</p>
 
-        <section class="contact-links">
+        <div class="contact-links">
 
             <a href="tel:+46737154162" class="footer-link">
                 <i class="fas fa-phone"></i> +46 73 715 41 62
@@ -118,7 +119,7 @@
             <a href="mailto:david@example.com" class="footer-link">
                 <i class="fas fa-envelope"></i> davidfkarlsson@proton.me
             </a>
-        </section>
+        </div>
     </footer>
 
     <script src="javascript/app.js"></script>
