@@ -819,6 +819,8 @@ input[type="submit"]:active {
 
 .p-projectlink {
   color: green;
+  word-wrap: break-word;
+  
 }
 
 .h3-project {
@@ -907,7 +909,7 @@ input[type="submit"]:active {
   }
 
   .resume h4 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .resume p {
