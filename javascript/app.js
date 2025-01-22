@@ -32,8 +32,8 @@ hamburgerMenu.addEventListener('click', () => {
 const filterButton = document.getElementById('filter-button');
 const filterContainer = document.getElementById('filter-container')
 
-// Lägger till en klickhändelse
 
+// Lägger till en klickhändelse
 filterButton.addEventListener('click', () => {
     filterContainer.classList.toggle('active'); // Visar/döljer filterkeywords
     filterButton.classList.toggle('active');
