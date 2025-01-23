@@ -104,11 +104,6 @@ header {
 
 /* Navigation links*/
 
-nav {
-  display: flex;
-  list-style: none;
-}
-
 nav ul {
   display: flex; /* Gör så att listan också använder flexbox */
   padding: 0; /* Tar bort eventuell padding från ul */
@@ -141,16 +136,17 @@ nav a.active {
 /* Hamburger-menyn */
 .hamburger-menu {
   display: none;
-  flex-direction: column;
   cursor: pointer;
-  gap: 5px;
 }
 
-.hamburger-menu span {
+.bar {
+  display: block;
   width: 25px;
   height: 3px;
+  margin: 4px 0;
   background-color: #47596a;
-  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out; /* För äldre versioner av webbläsare*/
+  transition: all 0.3s ease-in-out;
 }
 
 #nav-mobile {
@@ -204,10 +200,6 @@ nav a.active {
     font-size: 12px;
   }
 
-  .hamburger-menu {
-    display: flex;
-  }
-
   #header-h1 {
     font-size: 18px;
   }
@@ -218,6 +210,22 @@ nav a.active {
 
   #nav-mobile.active {
     display: flex; /* Visa menyn när aktiv */
+}
+
+.hamburger-menu {
+  display: block;
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 }
 
