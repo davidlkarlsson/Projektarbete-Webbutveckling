@@ -43,24 +43,25 @@ body {
   
 /* ---------------------- GLOBAL IMAGE STYLES ---------------------- */
 
-body {
+.hero-image {
     background-image: url(../images/desktop-background.jpg);
     background-size: cover; /* Gör att bilden täcker hela området */
     background-position: center center; /* Centrerar bilden */
     background-attachment: fixed; /* Gör att bilden stannar på plats när man scrollar */
-    height: 100%; /* Ser till att kroppen täcker hela höjden på skärmen */
+    height: 100vh; /* Ser till att kroppen täcker hela höjden på skärmen */
+    width: 100vw;
 }
 
   /* För tablet-enheter (max-bredd 1500px) */
   @media (max-width: 1500px) {
-    body {
+    .hero-image {
       background-image: url(../images/tablet-background.jpg);
     }
   }
   
   /* För mobila enheter (max-bredd 700px) */
   @media (max-width: 700px) {
-    body {
+    .hero-image {
       background-image: url(../images/mobile-background.jpg);
     }
   }
@@ -232,10 +233,38 @@ nav a.active {
 
 /* ---------------------- HOME SECTION ---------------------- */
 
-.section-home {
+.hero {
+  display: relative;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Håller videon på plats även när du scrollar */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Täck hela bredden på viewporten */
+  height: 100vh; /* Täck hela höjden på viewporten */
+  overflow: hidden;
+  z-index: -1; /* Skicka videon bakom allt innehåll */
+  background-color: rgba(0, 0, 0, 0.9);
+}
 
+.video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fyll hela viewporten utan att deformera videon */
+}
+
+.main-home {
+  display: flex;
+}
+
+.section-home {
   display: flex;
   flex-direction: column;
+  background-color: rgba(34,34,42,0.5); /* 40% opacitet */
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: 20px;
 }
 
 
@@ -266,8 +295,13 @@ nav a.active {
 /* För skärmar max 1500px (tablet) */
 @media (max-width: 1500px) {
 
+  .main-home {
+    justify-content: center;
+  }
+
   .section-home {
     align-items: center;
+    margin-left: 0px;
   }
 
   #h2-home {
@@ -289,8 +323,13 @@ nav a.active {
 /* För skärmar max 760px (phone) */
 @media (max-width: 760px) {
 
+  .main-home {
+    justify-content: center;
+  }
+
   .section-home {
     align-items: center;
+    margin-left: 0px;
   }
   #h2-home {
     font-size: 30px;
